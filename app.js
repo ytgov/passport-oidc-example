@@ -33,12 +33,12 @@ app.use(passport.session())
 
 // set up passport
 passport.use('oidc', new OidcStrategy({
-  issuer: 'https://c1dev.vivvo.com/',
-  authorizationURL: 'https://c1dev.vivvo.com/oauth/v2/authorize',
-  tokenURL: 'https://c1dev.vivvo.com/oauth/v2/token',
-  userInfoURL: 'https://c1dev.vivvo.com/oauth/v2/userinfo',
-  clientID: '41209adf-45e9-4d1b-8720-8c6a1e680ceb',
-  clientSecret: 'd18a3ba5-e7be-4da6-857d-333e5cf6e794',
+  issuer: 'https://yukon.vivvocloud.com',
+  authorizationURL: 'https://yukon.vivvocloud.com/oauth/v2/authorize',
+  tokenURL: 'https://yukon.vivvocloud.com/oauth/v2/token',
+  userInfoURL: 'https://yukon.vivvocloud.com/oauth/v2/userinfo',
+  clientID: '',
+  clientSecret: '',
   callbackURL: 'http://localhost:3000/authorization-code/callback',
   scope: 'openid profile email phone address'
 }, (issuer, sub, profile, accessToken, refreshToken, done) => {
