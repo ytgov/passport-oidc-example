@@ -42,7 +42,6 @@ passport.use('oidc', new OidcStrategy({
   callbackURL: 'http://localhost:3000/authorization-code/callback',
   scope: 'openid profile email phone address'
 }, (issuer, sub, profile, accessToken, refreshToken, done) => {
-  console.log(JSON.stringify(profile,null,2))
   return done(null, profile)
 }))
 
