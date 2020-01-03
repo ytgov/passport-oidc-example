@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome <%= user.displayName %>!</p>
+<p>Address: </p>
+<ul>
+<li> <%= user._json.address.street_address %> </li>
+<li> <%= user._json.address.locality %>, <%= user._json.address.region %> </li>
+<li> <%= user._json.address.postal_code %> </li>
+</ul>
+<br/>
+<pre>
+    <%= JSON.stringify(user, null, 4) %>
+</pre>
+</body>
+</html>

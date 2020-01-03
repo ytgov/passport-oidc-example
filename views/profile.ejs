@@ -1,15 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<title>Transactional Services - Yukon.ca</title>
+	<link href="/static/css/main.8f0257e7.css" rel="stylesheet">
+	<link type="image/x-icon" rel="icon" href="/favicon.ico">
 </head>
-<body>
-<h1><%= title %></h1>
-<p>Welcome <%= user.displayName %>!</p>
-<br/>
-<pre>
-    <%= JSON.stringify(user, null, 4) %>
-</pre>
+
+<body class="transactional-services">
+<noscript>
+	You need to enable JavaScript to run this app.
+</noscript>
+<header id="navbar" role="banner">
+    
+	<div>
+		<div id="wb-bnr">
+            
+			<div class="container">
+				<div class="row">
+                    
+
+					<div class="site-main-logo col-6" >
+						<div>
+							<a href="/"><object id="header-logo" data="/images/logo.svg" role="img" type="image/svg+xml" alt="Government of Yukon Logo" tabindex="-1">
+								<img alt="Government of Yukon Logo" src="/images/logo.png">
+							</object></a>
+						</div>
+					</div>
+					<div class="site-nav-toggle col-6">
+						<div class="row">
+							<div class="pull-right">
+								<section id="wb-lng" class="header-lang-toggle">
+									<ul class="text-right">
+										<li id="wet-fullhd-lang"><a href="/fr" class="link" hreflang="fr" lang="fr">Français</a></li>
+									</ul>
+								</section>
+								<button aria-controls="global-nav" aria-haspopup="true" id="menu-button" title="Search and menus" aria-label="Menu collapsed"><span class="menu-icon" aria-hidden="true"><svg width="30" height="30" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="#323232" fill-rule="evenodd"><rect width="30" height="6" rx="2"></rect><rect y="12" width="30" height="6" rx="2"></rect><rect y="24" width="30" height="6" rx="2"></rect></g></svg></span>
+								<p class="gov-serv">
+									Menu
+								</p>
+								</button>
+								<div>
+									<div class="bm-overlay" style="position: fixed; z-index: 1000; width: 100vw; height: 100%; background: rgba(0, 0, 0, 0.3) none repeat scroll 0% 0%; opacity: 0; transition: opacity 0.3s ease 0s, transform 0s ease 0.3s; left: 0px; top: 0px; transform: translate3d(100%, 0px, 0px);">
+									</div>
+									<div id="" class="bm-menu-wrap" style="position: fixed; right: 0px; z-index: 1100; width: 60%; height: 100%; transition: all 0.5s ease 0s; background: rgb(255, 255, 255) none repeat scroll 0% 0%; top: 0px; transform: translate3d(100%, 0px, 0px);">
+										<div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;">
+											<nav class="bm-item-list" style="height: 100%;">
+												<nav id="react-nav" aria-label="Main navigation" aria-hidden="true" class="bm-item" style="display: block; outline: currentcolor none medium;">
+													<header>
+														<h3 class="gov-serv-h3">
+															Transactional services <br>
+															components
+														</h3>
+													</header>
+													<h2 class="visuallyhidden">
+														Topics menu
+													</h2>
+													<div class="region region-navigation">
+														<ul role="menubar" class="menu nav">
+															<li class="leaf nav-item"><a href="/" class="nav-link">Home</a></li>
+														</ul>
+													</div>
+												</nav>
+											</nav>
+										</div>
+										<div>
+											<div class="bm-cross-button" style="position: absolute; width: 90px; height: 50px; right: 80px; top: 40px; z-index: 1100;">
+												<div class="bm-cross" style="width: 100%; height: 100%;">
+													close <svg viewbox="0 0 40 40"><path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"></path></svg>
+												</div>
+												<button style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; border: medium none; font-size: 0px; background: transparent none repeat scroll 0% 0%; color: transparent; outline: currentcolor none medium; cursor: pointer;">Close Menu</button>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div class="bm-burger-button" style="z-index: 1000;">
+											<span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 0%; opacity: 1;"></span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 40%; opacity: 1;"></span><span class="bm-burger-bars" style="position: absolute; height: 20%; left: 0px; right: 0px; top: 80%; opacity: 1;"></span></span><button style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; border: medium none; opacity: 0; font-size: 8px; cursor: pointer;">Open Menu</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-search-bar">
+			<div class="container">
+				<div class="row">
+					<section id="wb-srch" class="col-sm-6 offset-sm-3 header-search">
+						<h2>
+							Search
+						</h2>
+						<div class="region region-search-bar">
+							<section id="block-search-form" class="block block-search clearfix">
+								<form role="search" action="/" method="post" id="search-block-form" accept-charset="UTF-8" target="_self" class="search-form form-search content-search">
+									<div class="position-relative form-group">
+										<h2 class="element-invisible">
+											Search form
+										</h2>
+										<div class="input-group">
+											<input title="Enter the terms you wish to search for." placeholder="Search" aria-label="Search" id="edit-search-block-form--2" name="search_block_form" size="15" maxlength="128" class="custom-search-box form-control form-text form-control" value="" type="text">
+											<span class="input-group-btn"><button type="submit" value="Search" aria-label="Search" class="btn btn-primary btn btn-secondary"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
+										</div>
+										<div class="form-actions form-wrapper form-group" id="edit-actions">
+											<button type="submit" id="edit-submit" name="op" value="Search" class="element-invisible btn btn-default form-submit btn btn-secondary">Search</button>
+										</div>
+										<input name="form_build_id" class="form-control" value="form-8Kc5uxswUPJsI0nufqOGtz9hf0TwKHwcuQ4rhDlmCeA" type="hidden">
+										<input name="form_id" class="form-control" value="search_block_form" type="hidden">
+										<input name="custom_search_paths" class="form-control" value="search?query=[key]" type="hidden">
+									</div>
+								</form>
+							</section>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="aurora-town">
+	<span class="aurora--main"></span>
+</div>
+<div id="content">
+	<div class="content container">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="container">
+						<div class="row">
+                            <div style="min-height: 600px;" class="col">
+                                <div class="card-deck col-sm-6"> 
+                                <div class="m-2 card">
+                                    <div class="card-header"><%= title %></div>
+                                    <div class="card-body">
+                                        <h5>Welcome <%= user.displayName %>! </h5>
+                                        <p><i>Check that your address details are correct </i></p>
+                                        
+                                        <div>
+                                        <div> <%= user._json.address.street_address %> </div>
+                                        <div> <%= user._json.address.locality %>, <%= user._json.address.region %> </div>
+                                        <div> <%= user._json.address.postal_code %> </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"><span><span><a href="" class="btn btn-secondary">Continue</a></span><span  class="float-right"><a href="" class="btn btn-secondary">Fix my Address</a></span>
+                                    </span></div>
+                                </div>
+                            </div>
+                            
+                    
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="wb-info" role="contentinfo">
+	<div>
+		<div class="container">
+			<div class="row">
+				<ul class="col-md-10 ftr-urlt-lnk nav">
+					<h2 class="wb-inv">
+						About this site
+					</h2>
+				</ul>
+			</div>
+		</div>
+		<div class="brand">
+			<div class="container">
+				<div class="row">
+					<div class="brand-items col-12">
+						<div class="site-main-logo">
+							<object id="footer-logo" data="/images/logo-white.svg" role="img" type="image/svg+xml" alt="Government of Yukon Logo" tabindex="-1">
+								<img alt="Government of Yukon Logo" src="/images/logo-white.png">
+							</object>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-menu-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="d-flex flex-row col-6">
+						<ul class="footer-menu navbar-left nav">
+							<section id="block-menu-menu-wet-footer" class="block block-menu clearfix">
+								<h2 class="block-title block-title block-title">
+									Footer menu
+								</h2>
+								<ul class="nav navbar-nav">
+									<li class="first leaf active active"><a href="/en" class="active active active active">Home</a></li>
+									<li class="leaf"><a href="/en/news">News</a></li>
+									<li class="leaf"><a href="/en/copyright">Copyright</a></li>
+									<li class="leaf"><a href="/en/privacy-statement">Privacy statement</a></li>
+									<li class="last leaf"><a href="/en/disclaimer">Disclaimer</a></li>
+								</ul>
+							</section>
+						</ul>
+					</div>
+					<div class="d-flex flex-row-reverse col-6">
+						<div class="site-desc-wrap navbar-right">
+							<p class="site-desc">
+								© Copyright 2018 <a href="/">Government of Yukon</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
 </body>
 </html>
