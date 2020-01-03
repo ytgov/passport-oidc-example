@@ -18,7 +18,7 @@ var vivvo= {
     clientID: '002e38db-2a03-4dc6-aedb-8732bb9e4060',
     clientSecret: 'cc3fe360-86e1-4fba-a74c-d78c5450f50d',
     //callbackURL: 'http://localhost:3000/authorization-code/callback',
-    callbackURL: 'http://yg-demo-energy.somet.seekingtangents.com/',
+    callbackURL: 'https://yg-demo-energy.somet.seekingtangents.com/',
     scope: 'openid profile email phone address'
   }
 
