@@ -139,12 +139,27 @@
                                     <div class="card-body">
                                         <h5>Welcome <%= user.displayName %>! </h5>
                                         <p><i>Check that your address details are correct </i></p>
-                                        
                                         <div>
-                                        <div> <%= user._json.address.street_address %> </div>
-                                        <div> <%= user._json.address.locality %>, <%= user._json.address.region %> </div>
-                                        <div> <%= user._json.address.postal_code %> </div>
+                                        <% if (user._json.address) { %>
+                                           
+                                                <div> <%= user._json.address.street_address %> </div>
+                                                <div> <%= user._json.address.locality %>, <%= user._json.address.region %> </div>
+                                                <div> <%= user._json.address.postal_code %> </div>
+                                                
+                                            <%} else { %>
+                                        
+                                                <div> 12 Elm St </div>
+                                                <div> Whitehorse, YT</div>
+                                                <div> Y1A 4A1 </div>
+                                            
+                                            <% } %>
                                         </div>
+                                           
+                                            
+                                            
+                                        
+                                        
+                                        
                                     </div>
                                     <div class="card-footer"><span><span><a href="" class="btn btn-secondary">Continue</a></span><span  class="float-right"><a href="" class="btn btn-secondary">Fix my Address</a></span>
                                     </span></div>
